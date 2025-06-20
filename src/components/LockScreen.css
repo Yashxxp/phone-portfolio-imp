@@ -1,0 +1,140 @@
+/* LockScreen.css */
+.lock-bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+.iphone-frame {
+  width: 320px;
+  height: 670px;
+  border-radius: 38px;
+  background: #222;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s cubic-bezier(.4,1.6,.6,1), opacity 0.4s;
+  margin: 40px auto;
+}
+.iphone-frame.unlock-anim {
+  transform: translateY(-100vh) scale(0.98);
+  opacity: 0;
+}
+.notch {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.status-bar {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 32px;
+  z-index: 2;
+}
+.status-time {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lock-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  z-index: 1;
+}
+.date {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+}
+.clock {
+  color: #fff;
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+}
+.lock-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 28px;
+  z-index: 2;
+}
+.lock-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lock-btn:active {
+  background: rgba(255,255,255,0.28);
+}
+.swipe-up {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+.swipe-chevron {
+  width: 32px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+.swipe-chevron svg {
+  width: 28px;
+  height: 10px;
+  color: #fff;
+  opacity: 0.8;
+}
+.swipe-text {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+  letter-spacing: 0.01em;
+} 
